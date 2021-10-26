@@ -1,0 +1,244 @@
+/* Universal Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    scroll-behavior: auto;
+}
+
+body {
+    position: flex;
+    flex-direction: column;
+}
+
+
+/* Colors Style  */
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --verydarkblue: hsl(234, 12%, 34%);
+    --grayishblue: hsl(229, 6%, 66%);
+    --verylightgray: hsl(0, 0%, 98%);
+}
+
+
+/* Sheet Styles */
+
+.title {
+    margin-top: 5rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+    color: var(--verydarkblue);
+}
+
+.title h1 {
+    font-size: 42px;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+    padding-bottom: 1.5rem;
+}
+
+.title span {
+    font-weight: 600;
+}
+
+.title p {
+    margin: 0 auto;
+    width: 600px;
+    color: var(--grayishblue);
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+}
+
+.card {
+    width: 350px;
+    height: 250px;
+    border-radius: 6px;
+    box-shadow: 0px 15px 30px -11px rgba(118, 164, 219, 0.5);
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0px 15px 30px -11px rgba(18, 79, 153, 0.5);
+}
+
+#cyan {
+    border-top: var(--cyan) 5px solid;
+}
+
+#red {
+    border-top: var(--red) 5px solid;
+    margin-bottom: 2rem;
+}
+
+#yellow {
+    border-top: var(--orange) 5px solid;
+}
+
+#blue {
+    border-top: var(--blue) 5px solid;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--verydarkblue);
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.8rem;
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+}
+
+.card-paragraph {
+    width: 300px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--grayishblue);
+    letter-spacing: 0.05rem;
+    line-height: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.icon {
+    width: 16%;
+    position: relative;
+    left: 18rem;
+    top: 3rem;
+}
+
+#light {
+    top: 3.2rem;
+}
+
+.cards-sub {
+    margin-left: -30rem;
+    margin-right: -30rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.name {
+    text-decoration: none;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1440px) {
+    .cards-sub {
+        margin-left: -20rem;
+        margin-right: -20rem;
+    }
+    footer {
+        position: static;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .title {
+        margin-bottom: 2rem;
+    }
+    .cards {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-between;
+    }
+    .card {
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        margin-bottom: 3rem;
+    }
+    .title h1 {
+        font-size: 1.8rem;
+    }
+    .title span {
+        font-size: 1.8rem;
+    }
+    .title p {
+        font-size: 0.9rem;
+        width: 350px;
+        line-height: 1.8rem;
+        letter-spacing: 0.1rem;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 320px) {
+    .title {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    .title h1 {
+        font-size: 1.3rem;
+        padding-bottom: 1rem;
+    }
+    .title span {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+    .title p {
+        font-size: 0.8rem;
+        width: 280px;
+        line-height: 1.4rem;
+        letter-spacing: 0.06rem;
+    }
+    .card {
+        width: 280px;
+        height: 200px;
+    }
+    .card-title {
+        padding-top: 1.2rem;
+        padding-left: 1.4rem;
+    }
+    .card-paragraph {
+        width: 280px;
+    }
+    .icon {
+        width: 15%;
+        left: 16rem;
+        top: 2rem;
+    }
+    #light {
+        top: 2rem;
+    }
+}
